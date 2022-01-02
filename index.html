@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <!-- svg>use[href] -->
     <!--header-->
     <header class="header">
       <div class="container hat">
@@ -58,7 +59,16 @@
       <section class="hero section">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="button primary" type="button">Заказать услугу</button>
+          <button class="button primary" type="button" data-modal-open>Заказать услугу</button>
+        </div>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <button class="close" type="button" data-modal-close>
+              <svg class="close-svg" width="18px" height="18px">
+                <use href="./images/icons.svg#closeblack"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
 
@@ -119,12 +129,15 @@
           <ul class="do-list">
             <li>
               <img src="./images/box1.jpg" alt="Фото компьютера" width="370" />
+              <p class="do-list-text">Десктопные приложения</p>
             </li>
             <li>
               <img src="./images/box2.jpg" alt="Фото мобильного" width="370" />
+              <p class="do-list-text">Мобильные приложения</p>
             </li>
             <li>
               <img src="./images/box3.jpg" alt="Фото планшета" width="370" />
+              <p class="do-list-text">Дизайнерские решения</p>
             </li>
           </ul>
         </div>
@@ -142,8 +155,8 @@
                 <li>
                   <a class="team-link" href=""
                     ><svg class="team-list-icon">
-                      <use href="./images/icons.svg#instagram"></use>
-                      </svg></a>
+                      <use href="./images/icons.svg#instagram"></use></svg
+                  ></a>
                 </li>
                 <li>
                   <a href=""
@@ -311,29 +324,31 @@
     <footer class="footer">
       <div class="container cont-foot">
         <div>
-        <a class="footer-logo" href="index.html"><span class="part-logo">Web</span>Studio</a>
-        <address>
-          <ul class="address">
-            <li>
-              <a
-                class="footer-address"
-                href="https://goo.gl/maps/BeEHdiR37G75LsSc9"
-                target="_blank"
-                rel="noopener, noreferrer"
-                >г. Киев, пр-т Леси Украинки, 26
-              </a>
-            </li>
-            <li>
-              <a class="footer-address connect" href="mailto:info@example.com">info@example.com</a>
-            </li>
-            <li>
-              <a class="footer-address connect" href="tel:+380991111111">+38 099 111 11 11</a>
-            </li>
-          </ul>
+          <a class="footer-logo" href="index.html"><span class="part-logo">Web</span>Studio</a>
+          <address>
+            <ul class="address">
+              <li>
+                <a
+                  class="footer-address"
+                  href="https://goo.gl/maps/BeEHdiR37G75LsSc9"
+                  target="_blank"
+                  rel="noopener, noreferrer"
+                  >г. Киев, пр-т Леси Украинки, 26
+                </a>
+              </li>
+              <li>
+                <a class="footer-address connect" href="mailto:info@example.com"
+                  >info@example.com</a
+                >
+              </li>
+              <li>
+                <a class="footer-address connect" href="tel:+380991111111">+38 099 111 11 11</a>
+              </li>
+            </ul>
           </address>
-          </div>
-          <!--footer join-->
-          <div class="footer-join">
+        </div>
+        <!--footer join-->
+        <div class="footer-join">
           <h2 class="join-title">присоединяйтесь</h2>
           <ul class="footer-join-contacts">
             <li>
@@ -361,8 +376,9 @@
               ></a>
             </li>
           </ul>
-          </div>
-              </div>
+        </div>
+      </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
