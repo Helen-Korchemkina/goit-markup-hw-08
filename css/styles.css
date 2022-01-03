@@ -11,6 +11,7 @@
   --background-portfolio: #eeeeee;
   --footer-address-color: rgba(255, 255, 255, 0.6);
   --svg-color: #afb1b8;
+  --time-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
   background-color: var(--second-text-color);
@@ -75,9 +76,10 @@ ul {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-
   display: block;
   padding: 32px 0;
+
+  transition: color 250ms var(--time-function);
 }
 .site-nav {
   display: flex;
@@ -95,15 +97,6 @@ ul {
 .site-nav a:focus {
   color: var(--accent-color);
 }
-.nav-adress a {
-  color: var(--primary-text-color);
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  display: flex;
-  justify-content: center;
-  padding: 32px 0;
-}
 
 .site-nav .link {
   position: relative;
@@ -112,9 +105,9 @@ ul {
 
 .site-nav .link::after {
   position: absolute;
+  content: '';
   bottom: -1px;
   width: 100%;
-  content: '';
   height: 4px;
   display: block;
   border-radius: 2px;
@@ -130,7 +123,19 @@ ul {
 .nav-adress-icon.envelope {
   margin: 2px 10px 2px 0px;
 }
+.nav-adress a {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  display: flex;
+  justify-content: center;
+  padding: 32px 0;
+}
+.nav-adress-list a {
+  color: var(--primary-text-color);
 
+  transition: color 250ms var(--time-function);
+}
 .nav-adress-list a:hover,
 .nav-adress-list a:focus {
   color: var(--accent-color);
@@ -318,6 +323,8 @@ ul {
   width: 20px;
   height: 20px;
   fill: var(--svg-color);
+
+  transition: fill 250ms var(--time-function);
 }
 
 .our-team-contacts li,
@@ -328,11 +335,16 @@ ul {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  background-color: var(--second-text-color);
+
+  transition: background-color 250ms var(--time-function);
 }
-.our-team-contacts li:hover {
+.our-team-contacts a:hover,
+.our-team-contacts a:focus {
   background-color: var(--accent-color);
 }
-.our-team-contacts li:hover .team-list-icon {
+.our-team-contacts a:hover .team-list-icon,
+.our-team-contacts a:focus .team-list-icon {
   fill: var(--second-text-color);
 }
 
@@ -348,7 +360,7 @@ ul {
   display: flex;
   justify-content: space-between;
 }
-.regular-customers-list li {
+.regular-customers-list a {
   width: 170px;
   height: 92px;
   border: 1px solid var(--svg-color);
@@ -357,13 +369,15 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: border 250ms var(--time-function);
 }
-.regular-customers-list li:hover,
-.regular-customers-list li:focus {
+.regular-customers-list a:hover,
+.regular-customers-list a:focus {
   border: 1px solid var(--accent-color);
 }
-.regular-customers-list li:hover .regular-customers-svg,
-.regular-customers-list li:focus .regular-customers-svg {
+.regular-customers-list a:hover .regular-customers-svg,
+.regular-customers-list a:focus .regular-customers-svg {
   fill: var(--accent-color);
 }
 
@@ -371,6 +385,8 @@ ul {
   width: 106px;
   height: 60px;
   fill: var(--svg-color);
+
+  transition: fill 250ms var(--time-function);
 }
 /*footer*/
 .footer {
@@ -378,11 +394,9 @@ ul {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.footer a {
+.footer-logo {
   color: var(--second-text-color);
   text-decoration: none;
-}
-.footer-logo {
   font-family: Raleway, cursive;
   font-weight: 700;
   font-size: 26px;
@@ -402,8 +416,14 @@ ul {
 .footer-address.connect {
   color: var(--footer-address-color);
 }
-.footer-address:focus,
-.footer-address:hover {
+.footer-address {
+  color: var(--second-text-color);
+  text-decoration: none;
+
+  transition: color 250ms var(--time-function);
+}
+.footer-address:hover,
+.footer-address:focus {
   color: var(--button-accent-color);
 }
 .cont-foot {
@@ -443,8 +463,11 @@ ul {
   justify-content: center;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color 250ms var(--time-function);
 }
-.footer-join-contacts li:hover {
+.footer-join-contacts a:hover,
+.footer-join-contacts a:focus {
   background-color: var(--accent-color);
 }
 
@@ -452,9 +475,6 @@ ul {
 .button {
   color: var(--title-text-color);
   background-color: var(--background-light-color);
-  transition-property: background-color;
-  transition-duration: 1000ms;
-  transition-timing-function: ease-in;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -464,11 +484,18 @@ ul {
   padding: 6px 22px;
   text-align: center;
   border: none;
+  box-shadow: none;
+
+  transition-property: background-color, color, box-shadow, border-radius;
+  transition-duration: 250ms;
+  transition-timing-function: var(--time-function);
 }
 .button.primary {
   padding: 10px 32px;
   min-width: 200px;
   min-height: 50px;
+
+  transition: background-color 250ms var(--time-function);
 }
 .button:hover,
 .button:focus,
@@ -506,6 +533,9 @@ ul {
   margin-right: 30px;
   box-sizing: border-box;
   border: 1px solid #eeeeee;
+  box-shadow: none;
+
+  transition: box-shadow 250ms var(--time-function);
 }
 .work-examples li:nth-child(3n) {
   margin-right: 0;
@@ -513,8 +543,11 @@ ul {
 .work-examples li:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
+.work-examples a {
+  text-decoration: none;
+}
 .work-examples li:hover,
-.work-examples li:focus {
+.work-examples a:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -530,9 +563,7 @@ ul {
   font-size: 16px;
   line-height: 1.88;
 }
-.work-examples a {
-  text-decoration: none;
-}
+
 .work-examples-text {
   padding: 20px 24px;
   border: 1px solid var(--background-portfolio);
@@ -549,6 +580,7 @@ ul {
 }
 .work-examples-img {
   position: relative;
+  overflow: hidden;
 }
 .work-examples-description {
   background-color: rgba(33, 150, 243, 0.9);
@@ -560,12 +592,14 @@ ul {
   padding: 63px 24px;
 
   position: absolute;
-  top: 0;
+  bottom: -100%;
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0;
+  background-size: contain;
+
+  transition: transform 250ms var(--time-function);
 }
 .work-examples li:hover .work-examples-description {
-  opacity: 1;
+  transform: translateY(-100%);
 }
