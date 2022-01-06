@@ -179,19 +179,28 @@ ul {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 1;
+
+  opacity: 1;
+  transition: opacity 250ms var(--time-function);
 }
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
 }
+.backdrop.is-hidden.modal {
+  transform: translate(-50%, -50%) scale(0.75);
+}
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+
   min-width: 528px;
   min-height: 521px;
   background-color: var(--second-text-color);
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms var(--time-function);
 }
 .close {
   position: absolute;
