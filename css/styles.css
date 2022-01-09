@@ -219,6 +219,12 @@ ul {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  fill: var(--logo-black-color);
+
+  transition: fill 250ms var(--time-function);
+}
+.close-svg:hover {
+  fill: var(--accent-color);
 }
 textarea {
   resize: none;
@@ -248,6 +254,7 @@ textarea {
   margin-bottom: 20px;
 }
 .form-fields li {
+  position: relative;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -260,16 +267,30 @@ textarea {
   margin-bottom: 4px;
 }
 .form-fields input {
-  padding: 12px;
+  padding: 12px 12px 12px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+  width: 100%;
+
+  transition: border 250ms var(--time-function);
 }
 .form-fields textarea {
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+
+  transition: border 250ms var(--time-function);
+}
+.form-fields input:focus,
+.form-fields input:hover,
+.form-fields textarea:focus,
+.form-fields textarea:hover {
+  border: 1px solid #2196f3;
+}
+.form-fields input:focus-within {
+  border: 1px solid #2196f3;
 }
 .form-fields textarea::placeholder {
   font-size: 14px;
@@ -277,6 +298,19 @@ textarea {
   letter-spacing: 0.01em;
 
   color: rgba(117, 117, 117, 0.5);
+}
+.checkname-svg {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+  transform: translateY(100%);
+  fill: var(--title-text-color);
+
+  transition: fill 250ms var(--time-function);
+}
+.form-fields input:focus ~ .checkname-svg,
+.form-fields input:hover ~ .checkname-svg {
+  fill: #2196f3;
 }
 .check-agree {
   display: flex;
