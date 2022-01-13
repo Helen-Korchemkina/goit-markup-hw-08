@@ -61,7 +61,7 @@
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
           <button class="button primary" type="button" data-modal-open>Заказать услугу</button>
         </div>
-      <!--modal-->
+        <!--modal-->
         <div class="backdrop is-hidden" data-modal>
           <div class="modal">
             <button class="close" type="button" data-modal-close>
@@ -70,38 +70,59 @@
               </svg>
             </button>
             <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
-              <form class="js-inputs-form">
-                <ul class="form-fields">
-                <li><label for="name">Имя
-                <input type="text" name="name" id="name" autofocus placeholder=" "></label>
-                <svg class="checkname-svg" width="18px" height="18px">
-                  <use href="./images/icons.svg#checkname"></use>
-                </svg></li>
-                <li><label for="tel">Телефон</label>
-                <input type="tel" name="tel" id="tel" placeholder=" ">
-                <svg class="checkname-svg" width="18px" height="18px">
-                  <use href="./images/icons.svg#checkphone"></use>
-                </svg></li>
-                <li><label for="email">Почта</label>
-                <input type="email" name="email" id="email" placeholder=" ">
-                <svg class="checkname-svg" width="18px" height="18px">
-                  <use href="./images/icons.svg#checkenvelope"></use>
-                </svg></li>
-                <li><label for="comment">Комментарий</label>
-                <textarea type="text" name="comment" id="comment" rows="5" placeholder="Введите текст"></textarea></li>
-                    </ul>
-                <label class="hidden" for="agreement">
-                  <input type="checkbox" name="agreement" value="agreement" />
-                  Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a>
-                </label>
-              <div class="check-agree">
+            <form class="js-inputs-form">
+              <ul class="form-fields">
+                <li>
+                  <label
+                    >Имя
+                    <input type="text" name="name" autofocus />
+                    <svg class="checkname-svg" width="18px" height="18px">
+                      <use href="./images/icons.svg#checkname"></use>
+                    </svg>
+                  </label>
+                </li>
+                <li>
+                  <label
+                    >Телефон
+                    <input type="tel" name="tel" />
+                    <svg class="checkname-svg" width="18px" height="18px">
+                      <use href="./images/icons.svg#checkphone"></use></svg
+                  ></label>
+                </li>
+                <li>
+                  <label
+                    >Почта
+                    <input type="email" name="email" placeholder=" " />
+                    <svg class="checkname-svg" width="18px" height="18px">
+                      <use href="./images/icons.svg#checkenvelope"></use></svg
+                  ></label>
+                </li>
+                <li>
+                  <label
+                    >Комментарий
+                    <textarea
+                      name="comment"
+                      rows="5"
+                      placeholder="Введите текст"
+                    ></textarea>
+                  </label>
+                </li>
+              </ul>
+
+              <label class="check-agree">
+                <input class="hidden-check" type="checkbox" name="agreement" />
+                <span class="agreement-text"
+                  >Соглашаюсь с рассылкой и принимаю
+                  <a class="contract" href="" download>Условия договора</a></span
+                >
                 <svg class="check-svg" width="16px" height="15px">
-                <use href="./images/icons.svg#check"></use>
-                 </svg>
-              <p>Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a> </p></div>
+                  <use href="./images/icons.svg#check"></use>
+                </svg>
+              </label>
+
               <button class="button primary" type="submit">Отправить</button>
-              </form>
-           </div>
+            </form>
+          </div>
         </div>
       </section>
 
@@ -382,7 +403,7 @@
         </div>
         <!--footer join-->
         <div class="footer-join">
-          <h2 class="join-title">присоединяйтесь</h2>
+          <h2>присоединяйтесь</h2>
           <ul class="footer-join-contacts">
             <li>
               <a href=""
@@ -409,6 +430,20 @@
               ></a>
             </li>
           </ul>
+        </div>
+        <!--footer subscribe-->
+        <div class="footer-subscribe">
+          <h2>Подпишитесь на рассылку</h2>
+          <form>
+            <input type="email" name="email" placeholder="E-mail" />
+
+            <button class="button primary footer" type="submit">
+              Подписаться
+              <svg class="footer-send" width="24px" height="24px">
+                <use href="./images/icons.svg#send"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
