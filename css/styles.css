@@ -198,7 +198,7 @@ ul {
   left: 50%;
 
   width: 528px;
-  min-height: 581px;
+  padding: 40px 41px;
   background-color: var(--second-text-color);
 
   transform: translate(-50%, -50%) scale(1);
@@ -232,19 +232,18 @@ textarea {
   resize: none;
 }
 .modal-title {
+  font-style: normal;
+  font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
+  letter-spacing: 0.03em;
 
   color: #212121;
-  padding-top: 40px;
   padding-bottom: 12px;
 }
 .js-inputs-form {
   width: 448px;
-  margin-left: auto;
-  margin-right: auto;
-
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
