@@ -1,21 +1,20 @@
-:root {
-  --primary-text-color: #757575;
-  --second-text-color: #ffffff;
-  --title-text-color: #212121;
-  --accent-color: #2196f3;
-  --button-accent-color: #188ce8;
-  --background-hero-color: #c4c4c4;
-  --background-grey-color: #2f303a;
-  --background-light-color: #f5f4fa;
-  --logo-black-color: #000000;
-  --background-portfolio: #ffffff;
-  --footer-address-color: rgba(255, 255, 255, 0.6);
-  --svg-color: #afb1b8;
-  --time-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+$primary-text-color: #757575;
+$second-text-color: #ffffff;
+$title-text-color: #212121;
+$accent-color: #2196f3;
+$button-accent-color: #188ce8;
+$background-hero-color: #c4c4c4;
+$background-grey-color: #2f303a;
+$background-light-color: #f5f4fa;
+$logo-black-color: #000000;
+$background-portfolio: #ffffff;
+$footer-address-color: rgba(255, 255, 255, 0.6);
+$svg-color: #afb1b8;
+$time-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 body {
-  background-color: var(--second-text-color);
-  color: var(--primary-text-color);
+  background-color: $second-text-color;
+  color: $primary-text-color;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   letter-spacing: 0.03em;
@@ -49,8 +48,8 @@ a {
 }
 /*header*/
 .header {
-  background-color: var(--second-text-color);
-  border-bottom: 1px solid var(--background-portfolio);
+  background-color: $second-text-color;
+  border-bottom: 1px solid $background-portfolio;
   box-sizing: border-box;
 }
 .header__hat {
@@ -59,27 +58,27 @@ a {
 }
 /*logo*/
 .logo {
-  color: var(--logo-black-color);
+  color: $logo-black-color;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-
   display: block;
 }
 .logo__part--blue {
-  color: var(--accent-color);
+  color: $accent-color;
 }
+
 /*nav*/
 .header__site-nav a {
-  color: var(--title-text-color);
+  color: $title-text-color;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   display: block;
   padding: 32px 0;
 
-  transition: color 250ms var(--time-function);
+  transition: color 250ms $time-function;
 }
 .header__site-nav {
   display: flex;
@@ -95,12 +94,12 @@ a {
 }
 .header__site-nav a:hover,
 .header__site-nav a:focus {
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .header__site-nav .header__link {
   position: relative;
-  color: var(--accent-color);
+  color: $accent-color;
 }
 .header__site-nav .header__link::after {
   position: absolute;
@@ -110,7 +109,7 @@ a {
   height: 4px;
   display: block;
   border-radius: 2px;
-  background-color: var(--accent-color);
+  background-color: $accent-color;
 }
 .header__adress-icon {
   margin-right: 10px;
@@ -130,18 +129,18 @@ a {
   padding: 32px 0;
 }
 .header__adress-list a {
-  color: var(--primary-text-color);
+  color: $primary-text-color;
 
-  transition: color 250ms var(--time-function);
+  transition: color 250ms $time-function;
 }
 .header__adress-list a:hover,
 .header__adress-list a:focus {
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 /*hero*/
 .hero {
-  color: var(--second-text-color);
+  color: $second-text-color;
   text-align: center;
   max-width: 1600px;
   min-height: 600px;
@@ -150,7 +149,7 @@ a {
   margin-right: auto;
   padding: 200px 15px;
 
-  background-color: var(--background-hero-color);
+  background-color: $background-hero-color;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero.jpg);
   background-repeat: no-repeat;
@@ -180,7 +179,7 @@ a {
 
   opacity: 1;
   visibility: visible;
-  transition: opacity 250ms var(--time-function), visibility 250ms var(--time-function);
+  transition: opacity 250ms $time-function, visibility 250ms $time-function;
 }
 .backdrop.backdrop--is-hidden {
   opacity: 0;
@@ -197,10 +196,10 @@ a {
 
   width: 528px;
   padding: 40px 41px;
-  background-color: var(--second-text-color);
+  background-color: $second-text-color;
 
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms var(--time-function);
+  transition: transform 250ms $time-function;
 }
 .modal__button-close {
   position: absolute;
@@ -208,7 +207,7 @@ a {
   right: 8px;
   width: 30px;
   height: 30px;
-  background: #ffffff;
+  background: $second-text-color;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   box-sizing: border-box;
@@ -219,12 +218,12 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  fill: var(--logo-black-color);
+  fill: $logo-black-color;
 
-  transition: fill 250ms var(--time-function);
+  transition: fill 250ms $time-function;
 }
 .modal__close-svg:hover {
-  fill: var(--accent-color);
+  fill: $accent-color;
 }
 textarea {
   resize: none;
@@ -237,7 +236,7 @@ textarea {
   text-align: center;
   letter-spacing: 0.03em;
 
-  color: #212121;
+  color: $title-text-color;
   padding-bottom: 12px;
 }
 .modal__js-inputs-form {
@@ -247,7 +246,7 @@ textarea {
   line-height: 1.17;
   letter-spacing: 0.01em;
 
-  color: var(--primary-text-color);
+  color: $primary-text-color;
 }
 .modal__form-fields {
   margin-bottom: 20px;
@@ -275,7 +274,7 @@ textarea {
   width: 100%;
   cursor: pointer;
 
-  transition: border 250ms var(--time-function);
+  transition: border 250ms $time-function;
 }
 .modal__form-fields textarea {
   padding: 12px 16px;
@@ -285,7 +284,7 @@ textarea {
   border-radius: 4px;
   cursor: pointer;
 
-  transition: border 250ms var(--time-function);
+  transition: border 250ms $time-function;
 }
 input:focus,
 textarea:focus {
@@ -295,7 +294,7 @@ textarea:focus {
 .modal__form-fields input:hover,
 .modal__form-fields textarea:focus:not(:placeholder-shown),
 .modal__form-fields textarea:hover {
-  border: 1px solid #2196f3;
+  border: 1px solid $accent-color;
 }
 
 .modal__form-fields textarea::placeholder {
@@ -313,13 +312,13 @@ textarea:focus {
   top: 11px;
   left: 12px;
   transform: translateY(100%);
-  fill: var(--title-text-color);
+  fill: $title-text-color;
 
-  transition: fill 250ms var(--time-function);
+  transition: fill 250ms $time-function;
 }
 .modal__form-fields input:focus ~ .modal__checkname-svg,
 .modal__form-fields input:hover ~ .modal__checkname-svg {
-  fill: #2196f3;
+  fill: $accent-color;
 }
 .modal__check-agree {
   position: relative;
@@ -332,7 +331,7 @@ textarea:focus {
   letter-spacing: 0.03em;
   margin-bottom: 30px;
 
-  color: var(--primary-text-color);
+  color: $primary-text-color;
 }
 .modal__check-svg {
   position: absolute;
@@ -340,15 +339,15 @@ textarea:focus {
   display: flex;
   justify-content: center;
   text-align: center;
-  fill: white;
+  fill: $second-text-color;
   width: 16px;
   height: 15px;
-  border: 2px solid var(--title-text-color);
+  border: 2px solid $title-text-color;
   border-radius: 2px;
 }
 .modal__hidden-check:checked ~ .modal__check-svg {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
+  background-color: $accent-color;
+  border-color: $accent-color;
 }
 .modal__hidden-check {
   -webkit-appearance: none;
@@ -364,18 +363,18 @@ textarea:focus {
   content: '';
   width: 100%;
   height: 0.8px;
-  background-color: var(--accent-color);
+  background-color: $accent-color;
   transform: translateX(-100%);
   bottom: 2px;
 }
 .modal__contract {
   position: relative;
   text-decoration: none;
-  color: var(--accent-color);
+  color: $accent-color;
 }
 /*excellence*/
 .excellence h2 {
-  color: var(--title-text-color);
+  color: $title-text-color;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -396,7 +395,7 @@ textarea:focus {
   width: 270px;
 }
 .excellence__icon {
-  background-color: var(--background-light-color);
+  background-color: $background-light-color;
   margin-bottom: 30px;
   width: 270px;
   height: 120px;
@@ -411,7 +410,7 @@ textarea:focus {
 
 /*what we do*/
 .doing__title {
-  color: var(--title-text-color);
+  color: $title-text-color;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
@@ -429,7 +428,7 @@ textarea:focus {
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
-  color: var(--second-text-color);
+  color: $second-text-color;
   background-color: rgba(47, 48, 58, 0.8);
 
   display: flex;
@@ -444,19 +443,19 @@ textarea:focus {
 
 /*our team*/
 .our-team {
-  background-color: var(--background-light-color);
+  background-color: $background-light-color;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
 }
 .our-team__title {
-  color: var(--title-text-color);
+  color: $title-text-color;
   font-size: 36px;
   line-height: 1.17;
   margin-bottom: 50px;
 }
 .team-list__title {
-  color: var(--title-text-color);
+  color: $title-text-color;
   font-size: 16px;
   margin-bottom: 10px;
   margin-top: 30px;
@@ -469,7 +468,7 @@ textarea:focus {
   margin-bottom: 16px;
 }
 .team-list__item {
-  background-color: var(--second-text-color);
+  background-color: $second-text-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -484,9 +483,9 @@ textarea:focus {
 .team-list__icon {
   width: 20px;
   height: 20px;
-  fill: var(--svg-color);
+  fill: $svg-color;
 
-  transition: fill 250ms var(--time-function);
+  transition: fill 250ms $time-function;
 }
 
 .team-list__contacts li,
@@ -497,22 +496,22 @@ textarea:focus {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: var(--second-text-color);
+  background-color: $second-text-color;
 
-  transition: background-color 250ms var(--time-function);
+  transition: background-color 250ms $time-function;
 }
 .team-list__contacts a:hover,
 .team-list__contacts a:focus {
-  background-color: var(--accent-color);
+  background-color: $accent-color;
 }
 .team-list__contacts a:hover .team-list__icon,
 .team-list__contacts a:focus .team-list__icon {
-  fill: var(--second-text-color);
+  fill: $second-text-color;
 }
 
 /*regular customers*/
 .regular-customers__title {
-  color: var(--title-text-color);
+  color: $title-text-color;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
@@ -525,39 +524,39 @@ textarea:focus {
 .regular-customers__list a {
   width: 170px;
   height: 92px;
-  border: 1px solid var(--svg-color);
+  border: 1px solid $svg-color;
   box-sizing: border-box;
   border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  transition: border 250ms var(--time-function);
+  transition: border 250ms $time-function;
 }
 .regular-customers__list a:hover,
 .regular-customers__list a:focus {
-  border: 1px solid var(--accent-color);
+  border: 1px solid $accent-color;
 }
 .regular-customers__list a:hover .regular-customers__icon,
 .regular-customers__list a:focus .regular-customers__icon {
-  fill: var(--accent-color);
+  fill: $accent-color;
 }
 
 .regular-customers__icon {
   width: 106px;
   height: 60px;
-  fill: var(--svg-color);
+  fill: $svg-color;
 
-  transition: fill 250ms var(--time-function);
+  transition: fill 250ms $time-function;
 }
 /*footer*/
 .footer {
-  background-color: var(--background-grey-color);
+  background-color: $background-grey-color;
   padding-top: 60px;
   padding-bottom: 60px;
 }
 .logo--inverse {
-  color: var(--second-text-color);
+  color: $second-text-color;
   text-decoration: none;
 }
 
@@ -573,17 +572,17 @@ textarea:focus {
   margin-bottom: 9px;
 }
 .footer__address-link.footer__connect {
-  color: var(--footer-address-color);
+  color: $footer-address-color;
 }
 .footer__address-link {
-  color: var(--second-text-color);
+  color: $second-text-color;
   text-decoration: none;
 
-  transition: color 250ms var(--time-function);
+  transition: color 250ms $time-function;
 }
 .footer__address-link:hover,
 .footer__address-link:focus {
-  color: var(--button-accent-color);
+  color: $button-accent-color;
 }
 .footer__container {
   display: flex;
@@ -598,7 +597,7 @@ textarea:focus {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-  color: var(--second-text-color);
+  color: $second-text-color;
   margin-bottom: 20px;
 }
 .footer__join-contacts {
@@ -611,7 +610,7 @@ textarea:focus {
 .footer__list-icon {
   width: 20px;
   height: 20px;
-  fill: var(--second-text-color);
+  fill: $second-text-color;
 }
 .footer__join-contacts li,
 .footer__join-contacts a {
@@ -623,11 +622,11 @@ textarea:focus {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
 
-  transition: background-color 250ms var(--time-function);
+  transition: background-color 250ms $time-function;
 }
 .footer__join-contacts a:hover,
 .footer__join-contacts a:focus {
-  background-color: var(--accent-color);
+  background-color: $accent-color;
 }
 .footer__subscribe {
   margin-left: auto;
@@ -639,7 +638,7 @@ textarea:focus {
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  background-color: var(--background-grey-color);
+  background-color: $background-grey-color;
 
   font-size: 16px;
   line-height: 1.25;
@@ -655,8 +654,8 @@ textarea:focus {
 }
 /*buttons*/
 .button {
-  color: var(--title-text-color);
-  background-color: var(--background-light-color);
+  color: $title-text-color;
+  background-color: $background-light-color;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -670,27 +669,27 @@ textarea:focus {
 
   transition-property: background-color, color, box-shadow, border-radius;
   transition-duration: 250ms;
-  transition-timing-function: var(--time-function);
+  transition-timing-function: $time-function;
 }
 .button.button--primary {
   padding: 10px 32px;
   min-width: 200px;
   min-height: 50px;
 
-  transition: background-color 250ms var(--time-function);
+  transition: background-color 250ms $time-function;
 }
 .button:hover,
 .button:focus,
 .button.button--primary {
-  background-color: var(--accent-color);
-  color: var(--second-text-color);
+  background-color: $accent-color;
+  color: $second-text-color;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 }
 .button.button--primary:hover,
 .button.button--primary:focus {
-  background-color: var(--button-accent-color);
+  background-color: $button-accent-color;
 }
 .button.button--primary.footer {
   position: relative;
@@ -699,7 +698,7 @@ textarea:focus {
 }
 /*work-examples*/
 .portfolio {
-  background-color: var(--background-portfolio);
+  background-color: $background-portfolio;
 }
 .filters {
   margin-bottom: 50px;
@@ -729,7 +728,7 @@ textarea:focus {
 .work-examples a {
   text-decoration: none;
   box-shadow: none;
-  transition: box-shadow 250ms var(--time-function);
+  transition: box-shadow 250ms $time-function;
   display: block;
 }
 .work-examples a:hover,
@@ -738,21 +737,21 @@ textarea:focus {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .work-examples__title {
-  color: var(--title-text-color);
+  color: $title-text-color;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   margin-bottom: 4px;
 }
 .work-examples__text p {
-  color: var(--primary-text-color);
+  color: $primary-text-color;
   font-size: 16px;
   line-height: 1.88;
 }
 
 .work-examples__text {
   padding: 20px 24px;
-  border: 1px solid var(--background-portfolio);
+  border: 1px solid $background-portfolio;
   border-top: none;
 }
 .portfolio__title--hidden {
@@ -774,7 +773,7 @@ textarea:focus {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
-  color: var(--second-text-color);
+  color: $second-text-color;
   padding: 63px 24px;
 
   position: absolute;
@@ -784,7 +783,7 @@ textarea:focus {
   height: 100%;
   background-size: contain;
 
-  transition: transform 250ms var(--time-function);
+  transition: transform 250ms $time-function;
 }
 .work-examples li:hover .work-examples__description {
   transform: translateY(-100%);

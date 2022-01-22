@@ -15,6 +15,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
+    <link rel="stylesheet" href="./css/main.min.css" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -70,12 +71,12 @@
               </svg>
             </button>
             <p class="modal__title">Оставьте свои данные, мы вам перезвоним</p>
-            <form class="modal__js-inputs-form">
+            <form class="modal__js-inputs-form" action="#">
               <ul class="modal__form-fields">
                 <li>
                   <label
                     >Имя
-                    <input type="text" name="name" autofocus />
+                    <input type="text" name="name" autofocus required />
                     <svg class="modal__checkname-svg" width="18px" height="18px">
                       <use href="./images/icons.svg#checkname"></use>
                     </svg>
@@ -84,7 +85,7 @@
                 <li>
                   <label
                     >Телефон
-                    <input type="tel" name="tel" />
+                    <input type="tel" name="tel" required/>
                     <svg class="modal__checkname-svg" width="18px" height="18px">
                       <use href="./images/icons.svg#checkphone"></use></svg
                   ></label>
@@ -92,7 +93,7 @@
                 <li>
                   <label
                     >Почта
-                    <input type="email" name="email" placeholder=" " />
+                    <input type="email" name="email" placeholder=" " required/>
                     <svg class="modal__checkname-svg" width="18px" height="18px">
                       <use href="./images/icons.svg#checkenvelope"></use></svg
                   ></label>
