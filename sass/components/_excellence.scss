@@ -1,0 +1,35 @@
+/*excellence*/
+.excellence-title {
+  color: $title-text-color;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.excellence p {
+  line-height: 1.71;
+}
+.excellence {
+  padding-bottom: 0px;
+}
+.excellence__ul-list {
+  display: flex;
+  justify-content: space-between;
+}
+.excellence__ul-list li {
+  width: 270px;
+}
+.excellence__icon {
+  background-color: $background-light-color;
+  margin-bottom: 30px;
+  width: 270px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.excellence__icon-svg {
+  width: 70px;
+  height: 70px;
+}
