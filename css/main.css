@@ -61,7 +61,7 @@ a {
 /*header*/
 .header {
   background-color: #ffffff;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #eeeeee;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -992,7 +992,7 @@ textarea:focus {
 
 .work-examples__text {
   padding: 20px 24px;
-  border: 1px solid #ffffff;
+  border: 1px solid #eeeeee;
   border-top: none;
 }
 
