@@ -1,4 +1,4 @@
-/*work-examples*/
+/*portfolio*/
 .portfolio {
   background-color: $background-portfolio;
 }
@@ -11,29 +11,57 @@
   border: 0;
   clip: rect(0 0 0 0);
 }
+/*filters*/
 .filters {
-  margin-bottom: 50px;
   display: flex;
-  justify-content: center;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+    justify-content: center;
+  }
 }
-.filters li:not(:last-child) {
-  margin-right: 8px;
+.filters li {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 15px;
+  }
+
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
 }
+/*work-examples*/
 .work-examples {
   display: flex;
   flex-wrap: wrap;
+  @media screen and (max-width: 767px) {
+  }
+  @media screen and (min-width: $tablet) {
+    margin: -15px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin: -15px;
+  }
 }
 .work-examples li {
-  width: 370px;
-  margin-bottom: 30px;
-  margin-right: 30px;
-  box-sizing: border-box;
-
-  &:nth-child(3n) {
-    margin-right: 0;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    margin-bottom: 30px;
   }
-  &:nth-last-child(-n + 3) {
-    margin-bottom: 0;
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 3 * 30px) / 3);
+    margin: 15px;
   }
 }
 .work-examples a {
@@ -62,11 +90,16 @@
 }
 
 .work-examples__text {
-  padding: 20px 24px;
   border: 1px solid $border-color;
   border-top: none;
+  padding: 20px 24px;
 }
 
+@media screen and (min-width: $tablet) and (max-width: 1199px) {
+  .work-examples__text--size {
+    height: 146px;
+  }
+}
 .work-examples__img {
   position: relative;
   overflow: hidden;
