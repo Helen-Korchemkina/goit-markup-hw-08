@@ -23,12 +23,21 @@
     <header class="header">
       <div class="header__hat container"> 
         <a class="logo" href=""><span class="logo__part--blue">Web</span>Studio</a>
+        <button class="mob-menu mob-menu--is-open" type="button"
+        aria-expanded="false" aria-controls="mob-menu__list" data-menu-button>
+          <svg weight="40px" height="40px"
+          aria-label="Переключатель мобильного меню">
+            <use class="mob-menu__burger" href="./images/icons.svg#menu"></use>
+            <use class="mob-menu__cross" href="./images/icons.svg#closeblack"></use>
+          </svg>
+        </button>
+        <div class="mob-menu__list mob-menu--is-open" id="mob-menu__list" data-menu>Текст</div>
         <nav>
           <ul class="header__site-nav"> 
             <li><a class="header__link" href="./index.html">Студия</a></li>
             <li><a href="./portfolio.html">Портфолио</a></li>
             <li><a href="">Контакты</a></li>
-          </ul>
+                     </ul>
         </nav>
         <ul class="header__adress"> 
           <li>
@@ -136,7 +145,7 @@
                   <use href="./images/icons.svg#antenna"></use>
                 </svg>
               </div>
-              <h2 class="excellence-title">Внимание к деталям</h2>
+              <h2>Внимание к деталям</h2>
               <p>
                 Идейные соображения, а также начало повседневной работы по формированию позиции.
               </p>
@@ -447,6 +456,8 @@
         </div>
       </div>
     </footer>
+    <!--js-->
     <script src="./js/modal.js"></script>
-  </body>
+    <script src="./js/mobile-menu.js"></script>
+      </body>
 </html>

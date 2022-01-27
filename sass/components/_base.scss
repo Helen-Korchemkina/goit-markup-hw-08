@@ -22,12 +22,27 @@ ul {
   list-style: none;
 }
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
+
+  @media screen and (min-width: $desktop) {
+    padding: 94px 0;
+  }
 }
 .container {
   margin: 0 auto;
-  width: 1200px;
   padding: 0 15px;
+
+  border: 3px solid green;
+
+  @media screen and (max-width: 767px) {
+    width: $mobile;
+  }
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+  }
 }
 a {
   text-decoration: none;

@@ -1,33 +1,63 @@
 /*excellence*/
-.excellence-title {
+.excellence h2 {
   color: $title-text-color;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   margin-bottom: 10px;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 .excellence p {
   line-height: 1.71;
 }
 .excellence {
-  padding-bottom: 0px;
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 0px;
+  }
 }
 .excellence__ul-list {
-  display: flex;
-  justify-content: space-between;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
 }
 .excellence__ul-list li {
-  width: 270px;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 270px;
+    margin: 0;
+  }
+
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
 }
+
 .excellence__icon {
   background-color: $background-light-color;
-  margin-bottom: 30px;
-  width: 270px;
   height: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
 }
 .excellence__icon-svg {
   width: 70px;

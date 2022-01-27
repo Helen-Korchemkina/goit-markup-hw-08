@@ -6,6 +6,12 @@
 }
 .footer__address {
   margin-top: 20px;
+  margin-bottom: 60px;
+  @media screen and (min-width: $tablet) {
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0;
+  }
 }
 .footer__address-link.footer__connect {
   color: $footer-address-color;
@@ -28,12 +34,26 @@
   }
 }
 .footer__container {
-  display: flex;
-  align-items: baseline;
+  text-align: center;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: baseline;
+  }
 }
 /*footer join*/
 .footer__join {
-  margin-left: 70px;
+  margin-bottom: 60px;
+  @media screen and (min-width: $tablet) {
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0;
+    margin-left: 70px;
+  }
 }
 .footer__title {
   font-style: normal;
@@ -71,11 +91,12 @@
   height: 20px;
   fill: $second-text-color;
 }
-
+/*footer subscribe*/
 .footer__subscribe {
   margin-left: auto;
+
   & input {
-    width: 358px;
+    width: 450px;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
@@ -86,10 +107,18 @@
     font-size: 16px;
     line-height: 1.25;
     padding-left: 10px;
+    margin-bottom: 20px;
 
     align-items: center;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+
+    @media screen and (min-width: $tablet) {
+    }
+    @media screen and (min-width: $desktop) {
+      width: 358px;
+      margin-bottom: 0;
+    }
   }
 }
 .footer__send {

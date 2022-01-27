@@ -1,4 +1,9 @@
 /*what we do*/
+.doing {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
 .doing__title {
   color: $title-text-color;
   font-size: 36px;
