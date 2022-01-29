@@ -288,7 +288,7 @@ a {
 }
 
 /*mob-menu*/
-.mob-menu, .mob-menu__open, .mob-menu__close {
+.mob-menu {
   width: 40px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -301,46 +301,36 @@ a {
   right: 15px;
 }
 
-@media screen and (max-width: 767px) {
-  .mob-menu .mob-menu__cross, .mob-menu__open .mob-menu__cross, .mob-menu__close .mob-menu__cross {
-    display: none;
-  }
-  .mob-menu.mob-menu--is-open .mob-menu__cross, .mob-menu--is-open.mob-menu__open .mob-menu__cross, .mob-menu--is-open.mob-menu__close .mob-menu__cross {
-    display: block;
-  }
-  .mob-menu.mob-menu--is-open .mob-menu__burger, .mob-menu--is-open.mob-menu__open .mob-menu__burger, .mob-menu--is-open.mob-menu__close .mob-menu__burger {
+@media screen and (min-width: 768px) {
+  .mob-menu {
     display: none;
   }
 }
 
-@media screen and (min-width: 768px) {
-  .mob-menu, .mob-menu__open, .mob-menu__close {
-    display: none;
-  }
+.mob-menu.mob-menu__close {
+  top: 10px;
+  right: 15px;
 }
 
 .mob-menu__list {
   display: none;
-  position: fixed;
-  z-index: 2;
+  position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
   width: 100vw;
   height: 100vh;
-  padding: 0 40px;
+  padding: 48px 40px;
   background-color: #ffffff;
 }
 
 @media screen and (max-width: 767px) {
-  .mob-menu__list.mob-menu--is-open {
+  .mob-menu__list.is-open {
     display: block;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .mob-menu__list.mob-menu--is-open {
+  .mob-menu__list.is-open {
     display: none;
   }
 }

@@ -23,21 +23,18 @@
     <header class="header">
       <div class="header__hat container">
         <a class="logo" href=""><span class="logo__part--blue">Web</span>Studio</a>
-        <button
-          class="mob-menu"
-          type="button"
-          aria-expanded="true"
-          aria-controls="mob-menu__list"
-          data-menu-button
-        >
+        <button class="mob-menu mob-menu__open" type="button" data-menu-open>
           <svg widht="40px" height="40px" aria-label="Переключатель мобильного меню">
-            <use class="mob-menu__cross" href="./images/icons.svg#closeblack"></use>
             <use class="mob-menu__burger" href="./images/icons.svg#menu"></use>
           </svg>
         </button>
-          <!--mob-nav-->
-        <div class="mob-menu__list" id="mob-menu__list" data-menu>
-          
+        <!--mob-nav-->
+        <div class="mob-menu__list" data-menu>
+          <button class="mob-menu mob-menu__close" type="button" data-menu-close>
+            <svg widht="40px" height="40px" aria-label="Переключатель мобильного меню">
+              <use class="mob-menu__cross" href="./images/icons.svg#closeblack"></use>
+            </svg>
+          </button>
           <nav>
             <ul class="mob-menu__site-nav">
               <li><a class="mob-menu__link" href="./index.html">Студия</a></li>

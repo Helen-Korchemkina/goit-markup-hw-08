@@ -10,45 +10,29 @@
   position: absolute;
   right: 15px;
 
-  @media screen and (max-width: 767px) {
-    & .mob-menu__cross {
-      display: none;
-    }
-    &.mob-menu--is-open .mob-menu__cross {
-      display: block;
-    }
-
-    &.mob-menu--is-open .mob-menu__burger {
-      display: none;
-    }
-  }
   @media screen and (min-width: $tablet) {
     display: none;
   }
 }
-.mob-menu__open {
-  @extend .mob-menu;
-}
-.mob-menu__close {
-  @extend .mob-menu;
+.mob-menu.mob-menu__close {
+  top: 10px;
+  right: 15px;
 }
 
 .mob-menu__list {
   display: none;
 
-  position: fixed;
-  z-index: 2;
+  position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+
   width: 100vw;
   height: 100vh;
-  padding: 0 40px;
+  padding: 48px 40px;
 
   background-color: $background-portfolio;
 
-  &.mob-menu--is-open {
+  &.is-open {
     @media screen and (max-width: 767px) {
       display: block;
     }
