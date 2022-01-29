@@ -1,7 +1,9 @@
 @import './utils/variables';
 @import './components/base';
-@import './components/logo';
 @import './components/header';
+@import './components/logo';
+@import './components/_mob-menu';
+
 @import './components/hero';
 @import './components/modal';
 @import './components/excellence';

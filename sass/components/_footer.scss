@@ -7,8 +7,7 @@
 .footer__address {
   margin-top: 20px;
   margin-bottom: 60px;
-  @media screen and (min-width: $tablet) {
-  }
+
   @media screen and (min-width: $desktop) {
     margin-bottom: 0;
   }
@@ -59,8 +58,7 @@
 /*footer join*/
 .footer__join {
   margin-bottom: 60px;
-  @media screen and (min-width: $tablet) {
-  }
+
   @media screen and (min-width: $desktop) {
     margin-bottom: 0;
     margin-left: 70px;
@@ -112,7 +110,6 @@
   }
 
   & input {
-    width: 450px;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -126,6 +123,12 @@
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
 
+    @media screen and (max-width: 479px) {
+      width: calc(100% - 30px);
+    }
+    @media screen and (min-width: $mobile) {
+      width: 450px;
+    }
     @media screen and (min-width: $desktop) {
       width: 358px;
       margin-bottom: 0;

@@ -16,34 +16,68 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="./css/main.min.css" />
-    </head>
+  </head>
   <body>
     <!-- svg>use[href] -->
     <!--header-->
     <header class="header">
-      <div class="header__hat container"> 
+      <div class="header__hat container">
         <a class="logo" href=""><span class="logo__part--blue">Web</span>Studio</a>
-        <button class="mob-menu mob-menu--is-open" type="button"
-        aria-expanded="false" aria-controls="mob-menu__list" data-menu-button>
-          <svg weight="40px" height="40px"
-          aria-label="Переключатель мобильного меню">
-            <use class="mob-menu__burger" href="./images/icons.svg#menu"></use>
+        <button
+          class="mob-menu"
+          type="button"
+          aria-expanded="true"
+          aria-controls="mob-menu__list"
+          data-menu-button
+        >
+          <svg widht="40px" height="40px" aria-label="Переключатель мобильного меню">
             <use class="mob-menu__cross" href="./images/icons.svg#closeblack"></use>
+            <use class="mob-menu__burger" href="./images/icons.svg#menu"></use>
           </svg>
         </button>
-        <div class="mob-menu__list mob-menu--is-open" id="mob-menu__list" data-menu>Текст</div>
+          <!--mob-nav-->
+        <div class="mob-menu__list" id="mob-menu__list" data-menu>
+          
+          <nav>
+            <ul class="mob-menu__site-nav">
+              <li><a class="mob-menu__link" href="./index.html">Студия</a></li>
+              <li><a href="./portfolio.html">Портфолио</a></li>
+              <li><a href="">Контакты</a></li>
+            </ul>
+          </nav>
+          <ul class="mob-menu__adress">
+            <li>
+              <div class="mob-menu__phone">
+                <a href="tel:+380961111111"> +38 096 111 11 11</a>
+              </div>
+            </li>
+            <li>
+              <div class="mob-menu__mail">
+                <a href="mailto:info@devstudio.com"> info@devstudio.com </a>
+              </div>
+            </li>
+          </ul>
+          <ul class="mob-menu__social-list">
+            <li><a href="">Instagram</a></li>
+            <li><a href="">Twitter</a></li>
+            <li><a href="">Facebook</a></li>
+            <li><a href="">LinkedIn</a></li>
+          </ul>
+        </div>
+
+        <!--heder-nav-->
         <nav>
-          <ul class="header__site-nav"> 
+          <ul class="header__site-nav">
             <li><a class="header__link" href="./index.html">Студия</a></li>
             <li><a href="./portfolio.html">Портфолио</a></li>
             <li><a href="">Контакты</a></li>
-                     </ul>
+          </ul>
         </nav>
-        <ul class="header__adress"> 
+        <ul class="header__adress">
           <li>
-            <div class="header__adress-list"> 
+            <div class="header__adress-list">
               <a href="mailto:info@devstudio.com">
-                <svg class="header__adress-icon header__envelope" width="16px" height="12px"> 
+                <svg class="header__adress-icon header__envelope" width="16px" height="12px">
                   <use href="./images/icons.svg#envelope"></use>
                 </svg>
                 info@devstudio.com
@@ -51,7 +85,7 @@
             </div>
           </li>
           <li>
-            <div class="header__adress-list"> 
+            <div class="header__adress-list">
               <a href="tel:+380961111111">
                 <svg class="header__adress-icon" width="10px" height="16px">
                   <use href="./images/icons.svg#smartphone"></use>
@@ -68,7 +102,9 @@
       <section class="hero section">
         <div class="container">
           <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
-          <button class="button button--primary" type="button" data-modal-open>Заказать услугу</button>
+          <button class="button button--primary" type="button" data-modal-open>
+            Заказать услугу
+          </button>
         </div>
         <!--modal-->
         <div class="backdrop backdrop--is-hidden" data-modal>
@@ -93,7 +129,7 @@
                 <li>
                   <label
                     >Телефон
-                    <input type="tel" name="tel" required/>
+                    <input type="tel" name="tel" required />
                     <svg class="modal__checkname-svg" width="18px" height="18px">
                       <use href="./images/icons.svg#checkphone"></use></svg
                   ></label>
@@ -101,7 +137,7 @@
                 <li>
                   <label
                     >Почта
-                    <input type="email" name="email" placeholder=" " required/>
+                    <input type="email" name="email" placeholder=" " required />
                     <svg class="modal__checkname-svg" width="18px" height="18px">
                       <use href="./images/icons.svg#checkenvelope"></use></svg
                   ></label>
@@ -109,11 +145,7 @@
                 <li>
                   <label
                     >Комментарий
-                    <textarea
-                      name="comment"
-                      rows="5"
-                      placeholder="Введите текст"
-                    ></textarea>
+                    <textarea name="comment" rows="6" placeholder="Введите текст"></textarea>
                   </label>
                 </li>
               </ul>
@@ -387,7 +419,9 @@
     <footer class="footer">
       <div class="container footer__container">
         <div class="footer__contacts">
-          <a class="logo logo--inverse" href="index.html"><span class="logo__part--blue">Web</span>Studio</a>
+          <a class="logo logo--inverse" href="index.html"
+            ><span class="logo__part--blue">Web</span>Studio</a
+          >
           <address>
             <ul class="footer__address">
               <li>
@@ -405,7 +439,9 @@
                 >
               </li>
               <li>
-                <a class="footer__address-link footer__connect" href="tel:+380991111111">+38 099 111 11 11</a>
+                <a class="footer__address-link footer__connect" href="tel:+380991111111"
+                  >+38 099 111 11 11</a
+                >
               </li>
             </ul>
           </address>
@@ -458,5 +494,5 @@
     <!--js-->
     <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>
-      </body>
+  </body>
 </html>

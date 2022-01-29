@@ -13,11 +13,10 @@
   }
 }
 .regular-customers__list {
-  @media screen and (max-width: 1199px) {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -15px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+
   @media screen and (min-width: $desktop) {
     display: flex;
     justify-content: space-between;

@@ -6,8 +6,9 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
-  z-index: 1;
 
+  overflow-y: scroll;
+  z-index: 1;
   opacity: 1;
   visibility: visible;
   transition: opacity 250ms $time-function, visibility 250ms $time-function;
@@ -24,13 +25,23 @@
   position: absolute;
   top: 50%;
   left: 50%;
-
-  width: 528px;
-  padding: 40px 41px;
   background-color: $second-text-color;
-
+  padding: 40px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms $time-function;
+
+  @media screen and (max-width: 479px) {
+    width: calc(100% - 30px);
+  }
+  @media screen and (min-width: $mobile) {
+    width: 450px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 528px;
+  }
 }
 .modal__button-close {
   position: absolute;
@@ -78,13 +89,18 @@ textarea {
   padding-bottom: 12px;
 }
 .modal__js-inputs-form {
-  width: 448px;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-
   color: $primary-text-color;
+
+  @media screen and (min-width: $mobile) {
+    width: 370px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 448px;
+  }
 }
 .modal__form-fields {
   margin-bottom: 20px;
@@ -161,16 +177,20 @@ textarea {
   justify-content: center;
   align-items: center;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   margin-bottom: 30px;
-
   color: $primary-text-color;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 .modal__check-svg {
   position: absolute;
-  left: 12px;
+  left: 2px;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -179,6 +199,10 @@ textarea {
   height: 15px;
   border: 2px solid $title-text-color;
   border-radius: 2px;
+
+  @media screen and (min-width: $desktop) {
+    left: 12px;
+  }
 }
 .modal__hidden-check:checked ~ .modal__check-svg {
   background-color: $accent-color;

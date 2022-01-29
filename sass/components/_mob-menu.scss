@@ -1,0 +1,114 @@
+/*mob-menu*/
+
+.mob-menu {
+  width: 40px;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  right: 15px;
+
+  @media screen and (max-width: 767px) {
+    & .mob-menu__cross {
+      display: none;
+    }
+    &.mob-menu--is-open .mob-menu__cross {
+      display: block;
+    }
+
+    &.mob-menu--is-open .mob-menu__burger {
+      display: none;
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+.mob-menu__open {
+  @extend .mob-menu;
+}
+.mob-menu__close {
+  @extend .mob-menu;
+}
+
+.mob-menu__list {
+  display: none;
+
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 0 40px;
+
+  background-color: $background-portfolio;
+
+  &.mob-menu--is-open {
+    @media screen and (max-width: 767px) {
+      display: block;
+    }
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
+  }
+}
+
+.mob-menu__site-nav a {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: calc(47 / 40);
+  letter-spacing: 0.02em;
+  color: $title-text-color;
+
+  display: inline-flex;
+}
+.mob-menu__site-nav li:not(:last-child) {
+  margin-bottom: 32px;
+}
+.mob-menu__site-nav {
+  padding-bottom: 302px;
+}
+
+.mob-menu__phone a {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: calc(40 / 34);
+  letter-spacing: 0.02em;
+  color: $accent-color;
+}
+.mob-menu__phone {
+  padding-bottom: 32px;
+}
+.mob-menu__mail a {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: calc(28 / 24);
+  letter-spacing: 0.02em;
+  color: $primary-text-color;
+}
+.mob-menu__mail {
+  padding-bottom: 64px;
+}
+.mob-menu__social-list {
+  display: flex;
+}
+.mob-menu__social-list a {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: calc(22 / 18);
+  letter-spacing: 0.02em;
+  color: $accent-color;
+}
+.mob-menu__social-list li:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  margin-right: 10px;
+  padding-right: 10px;
+}
+.mob-menu__site-nav .mob-menu__link {
+  color: $accent-color;
+}
