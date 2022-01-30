@@ -22,13 +22,14 @@
 .mob-menu__list {
   display: none;
 
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
 
   width: 100vw;
   height: 100vh;
   padding: 48px 40px;
+  z-index: 2;
 
   background-color: $background-portfolio;
 
@@ -40,6 +41,12 @@
       display: none;
     }
   }
+}
+
+.mob-menu__window {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
 }
 
 .mob-menu__site-nav a {
@@ -54,9 +61,6 @@
 .mob-menu__site-nav li:not(:last-child) {
   margin-bottom: 32px;
 }
-.mob-menu__site-nav {
-  padding-bottom: 302px;
-}
 
 .mob-menu__phone a {
   font-weight: 500;
@@ -66,8 +70,9 @@
   color: $accent-color;
 }
 .mob-menu__phone {
-  padding-bottom: 32px;
+  margin-bottom: 32px;
 }
+
 .mob-menu__mail a {
   font-weight: 500;
   font-size: 24px;
@@ -75,11 +80,10 @@
   letter-spacing: 0.02em;
   color: $primary-text-color;
 }
-.mob-menu__mail {
-  padding-bottom: 64px;
-}
+
 .mob-menu__social-list {
   display: flex;
+  padding-top: 64px;
 }
 .mob-menu__social-list a {
   font-weight: 500;
