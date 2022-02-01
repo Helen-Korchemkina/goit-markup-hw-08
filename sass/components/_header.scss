@@ -8,10 +8,12 @@
   display: flex;
   align-items: center;
 
-  @media screen and (max-width: 767px) {
-    justify-content: space-between;
-    min-height: 60px;
-    position: relative;
+  justify-content: space-between;
+  height: 60px;
+  position: relative;
+
+  @media screen and (min-width: $tablet) {
+    height: 80px;
   }
 }
 
@@ -27,9 +29,8 @@
   transition: color 250ms $time-function;
 }
 .header__site-nav {
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
+  display: none;
+
   @media screen and (min-width: $tablet) {
     display: flex;
     margin-left: 88px;
@@ -41,10 +42,10 @@
   }
 }
 .header__adress {
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
+  display: none;
+
   @media screen and (min-width: $tablet) {
+    display: block;
     margin-right: 15px;
   }
   @media screen and (min-width: $desktop) {

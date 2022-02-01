@@ -20,23 +20,24 @@
 }
 
 .mob-menu__list {
-  display: none;
-
   position: fixed;
   top: 0;
   left: 0;
-
   width: 100vw;
   height: 100vh;
   padding: 48px 40px;
   z-index: 2;
 
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 250ms $time-function, opacity 250ms $time-function;
+
   background-color: $background-portfolio;
 
   &.is-open {
-    @media screen and (max-width: 767px) {
-      display: block;
-    }
+    transform: translateX(0);
+    opacity: 1;
+
     @media screen and (min-width: $tablet) {
       display: none;
     }
@@ -46,7 +47,9 @@
 .mob-menu__window {
   display: flex;
   flex-direction: column;
-  align-content: space-between;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
 }
 
 .mob-menu__site-nav a {
