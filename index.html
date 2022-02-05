@@ -24,14 +24,14 @@
       <div class="header__hat container">
         <a class="logo" href=""><span class="logo__part--blue">Web</span>Studio</a>
         <button class="mob-menu mob-menu__open" type="button" data-menu-open>
-          <svg widht="40px" height="40px" aria-label="Переключатель мобильного меню">
+          <svg height="40px" aria-label="Переключатель мобильного меню">
             <use class="mob-menu__burger" href="./images/icons.svg#menu"></use>
           </svg>
         </button>
         <!--mob-nav-->
         <div class="mob-menu__list" data-menu>
           <button class="mob-menu mob-menu__close" type="button" data-menu-close>
-            <svg widht="40px" height="40px" aria-label="Переключатель мобильного меню">
+            <svg height="40px" aria-label="Переключатель мобильного меню">
               <use class="mob-menu__cross" href="./images/icons.svg#closeblack"></use>
             </svg>
           </button>
@@ -221,15 +221,30 @@
           <h2 class="doing__title">Чем мы занимаемся</h2>
           <ul class="do-list">
             <li>
-              <img src="./images/box1.jpg" alt="Фото компьютера" width="370" />
+              <img
+                srcset="./images/box1.jpg 1x, ./images/box1-2x.jpg 2x"
+                src="./images/box1.jpg"
+                alt="Фото компьютера"
+                width="370"
+              />
               <p class="do-list__text">Десктопные приложения</p>
             </li>
             <li>
-              <img src="./images/box2.jpg" alt="Фото мобильного" width="370" />
+              <img
+                srcset="./images/box2.jpg 1x, ./images/box2-2x.jpg 2x"
+                src="./images/box2.jpg"
+                alt="Фото мобильного"
+                width="370"
+              />
               <p class="do-list__text">Мобильные приложения</p>
             </li>
             <li>
-              <img src="./images/box3.jpg" alt="Фото планшета" width="370" />
+              <img
+                srcset="./images/box3.jpg 1x, ./images/box3-2x.jpg 2x"
+                src="./images/box3.jpg"
+                alt="Фото планшета"
+                width="370"
+              />
               <p class="do-list__text">Дизайнерские решения</p>
             </li>
           </ul>
@@ -241,7 +256,22 @@
           <h2 class="our-team__title">Наша команда</h2>
           <ul class="team-list">
             <li class="team-list__item">
-              <img src="./images/photo1.jpg" alt="Игорь Демьяненко дизайнер проекта" width="270" />
+              <picture>
+                <source
+                  srcset="./images/photo1.jpg 1x, ./images/photo1-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/photo1-tab-1x.jpg 1x, ./images/photo1-tab-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/photo1-mob-1x.jpg 1x, ./images/photo1-mob-2x.jpg 2x"
+                  media="(min-width: 480px)"
+                />
+                <img src="./images/photo1.jpg" alt="Игорь Демьяненко дизайнер проекта" />
+              </picture>
+
               <h3 class="team-list__title">Игорь Демьяненко</h3>
               <p>Product Designer</p>
               <ul class="team-list__contacts">
@@ -272,7 +302,22 @@
               </ul>
             </li>
             <li class="team-list__item">
-              <img src="./images/photo2.jpg" alt="Ольга Репина разработчик" width="270" />
+              <picture>
+                <source
+                  srcset="./images/photo2.jpg 1x, ./images/photo2-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/photo2-tab-1x.jpg 1x, ./images/photo2-tab-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/photo2-mob-1x.jpg 1x, ./images/photo2-mob-2x.jpg 2x"
+                  media="(min-width: 480px)"
+                />
+                <img src="./images/photo2.jpg" alt="Ольга Репина разработчик" />
+              </picture>
+
               <h3 class="team-list__title">Ольга Репина</h3>
               <p>Frontend Developer</p>
               <ul class="team-list__contacts">
@@ -303,7 +348,22 @@
               </ul>
             </li>
             <li class="team-list__item">
-              <img src="./images/photo3.jpg" alt="Николай Тарасов маркетолог" width="270" />
+              <picture>
+                <source
+                  srcset="./images/photo3.jpg 1x, ./images/photo3-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/photo3-tab-1x.jpg 1x, ./images/photo3-tab-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/photo3-mob-1x.jpg 1x, ./images/photo3-mob-2x.jpg 2x"
+                  media="(min-width: 480px)"
+                />
+                <img src="./images/photo3.jpg" alt="Николай Тарасов маркетолог" />
+              </picture>
+
               <h3 class="team-list__title">Николай Тарасов</h3>
               <p>Marketing</p>
               <ul class="team-list__contacts">
@@ -334,7 +394,22 @@
               </ul>
             </li>
             <li class="team-list__item">
-              <img src="./images/photo4.jpg" alt="Михаил Ермаков дизайнер" width="270" />
+              <picture>
+                <source
+                  srcset="./images/photo4.jpg 1x, ./images/photo4-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/photo4-tab-1x.jpg 1x, ./images/photo4-tab-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/photo4-mob-1x.jpg 1x, ./images/photo4-mob-2x.jpg 2x"
+                  media="(min-width: 480px)"
+                />
+                <img src="./images/photo4.jpg" alt="Михаил Ермаков дизайнер" />
+              </picture>
+
               <h3 class="team-list__title">Михаил Ермаков</h3>
               <p>UI Designer</p>
               <ul class="team-list__contacts">
